@@ -24,7 +24,10 @@ export interface IAppContext {
     settingsTabLabel: string
   };
   resetButtonLabel: string;
+  nextButtonLabel: string;
   userName: string;
+  endereco: string;
+  idade: string;
   ctrlEnterOptionsTitle: string;
   ctrlEnterSendingOptions: {
     option1: string;

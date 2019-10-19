@@ -9,7 +9,7 @@ const setup = () => {
   return shallow(<ResetButton translations={translationsMock} />)
 };
 
-describe('ResetButton component', () => {
+describe('NextButton component', () => {
   it('renders without crashing', () => {
     const wrapper = setup();
     expect(wrapper).not.toBe(null)

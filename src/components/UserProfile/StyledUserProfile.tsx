@@ -7,6 +7,15 @@ const StyledUserProfile = styled("div")`
  label {
   font-size: 1.2em;
  }
+ select{
+   color: ${props => props.theme.primaryDarkColor};
+  width: 100%;
+  line-height: 28px;
+  margin-top: 7px;
+  font-size: 1.1em;
+  box-sizing: border-box;
+  padding: 7px;
+  }
  
  input {
   color: ${props => props.theme.primaryDarkColor};

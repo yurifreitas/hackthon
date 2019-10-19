@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { HashRouter, Route, RouteComponentProps, Switch, withRouter } from 'react-router-dom';
+import { HashRouter, Route, RouteComponentProps, withRouter } from 'react-router-dom';
 import Navigation from '../Navigation/Navigation';
 import ChatPage from '../pages/Chat/ChatPage';
 import SettingsPage from '../pages/Settings/SettingsPage';
@@ -13,11 +13,11 @@ export const AppRouter: React.FunctionComponent = () => {
     <HashRouter>
       <React.Fragment>
         <BlockedNavigation />
-        <Switch>
-          <Route exact={true} path='/' component={ChatPage} />
+          <Route exact={true} path='/' component={SettingsPage} />
           <Route path='/chat' component={ChatPage} />
+          <Route path='/cadastro' component={ChatPage} />
+
           <Route path='/settings' component={SettingsPage} />
-        </Switch>
       </React.Fragment>
     </HashRouter>
   );

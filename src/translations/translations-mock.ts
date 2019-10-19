@@ -19,10 +19,14 @@ export default {
     "settingsTabLabel": "Settings"
   },
   "resetButtonLabel": "Reset",
+  "nextButtonLabel": "Next",
+
   "ctrlEnterOptionsTitle": "Send messages on CTRL+ENTER",
   "ctrlEnterSendingOptions": {
     "option1": "On",
     "option2": "Off"
   },
-  "userName": "User name"
+  "userName": "User name",
+  "endereco": "Rua Pio 22",
+  "idade" : "34"
 };

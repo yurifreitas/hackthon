@@ -18,6 +18,8 @@
     "settingsTabLabel": "Configurações"
   },
   "resetButtonLabel": "Resetar",
+  "nextButtonLabel": "Próximo",
+
   "ctrlEnterOptionsTitle": "Enviar mensagem ao pressionar CTRL+ENTER",
   "ctrlEnterSendingOptions": {
     "option1": "Ligar",

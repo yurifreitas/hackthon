@@ -29,3 +29,17 @@ export const changeUsername = (username: string) => {
     username
   };
 };
+
+export const changeEndereco = (endereco: string) => {
+  return {
+    type: USER_CHANGED,
+    endereco
+  };
+};
+
+export const changeIdade = (idade: string) => {
+  return {
+    type: USER_CHANGED,
+    idade
+  };
+};
