@@ -58,11 +58,31 @@ export class Navigation extends React.Component<INavProps, INavState> {
 
   public render() {
     const { appContext } = this.props;
+    const { shouldBlink, unreadMessages } = this.state;
+
     return appContext && (
       <StyledNavigation>
         <li>
+          <NavLink exact={true}
+                   className={shouldBlink ? 'blinking' : 'no-blinking'}
+                   to='#'>
+            <FontAwesomeIcon icon={faBars} color="white" size="lg"/>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink exact={true} activeClassName='active'
+                   className={shouldBlink ? 'blinking' : 'no-blinking'}
+                   onClick={this.clearNotifications}
+                   to='/chat'>
+            <FontAwesomeIcon icon={faComment} color="white" size="lg"/>
+            <UnreadMessagesCounter count={unreadMessages}/>
+            <span>{appContext.nav.chatTabLabel}</span>
+          </NavLink>
+        </li>
+        <li>
           <NavLink activeClassName='active' to='/settings'>
-            <span>Samu Acessível</span>
+            <FontAwesomeIcon icon={faCog} color="white" size="lg"/>
+            <span>{appContext.nav.settingsTabLabel}</span>
           </NavLink>
         </li>
       </StyledNavigation>
@@ -75,11 +95,11 @@ export class Navigation extends React.Component<INavProps, INavState> {
     });
   };
 
-  // private stopBlinking = (): void => {
-  //   this.setState({
-  //     shouldBlink: false
-  //   });
-  // };
+  private stopBlinking = (): void => {
+    this.setState({
+      shouldBlink: false
+    });
+  };
 
   private updateUnreadMessagesCount = () => {
     this.setState({
@@ -87,10 +107,10 @@ export class Navigation extends React.Component<INavProps, INavState> {
     });
   };
 
-  // private clearNotifications = () => {
-  //   this.setState({ unreadMessages: 0, receivedUnreadMessages: [] });
-  //   this.stopBlinking();
-  // };
+  private clearNotifications = () => {
+    this.setState({ unreadMessages: 0, receivedUnreadMessages: [] });
+    this.stopBlinking();
+  };
 }
 
 const mapStateToProps = (state: any) => ({
