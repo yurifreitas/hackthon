@@ -26,7 +26,7 @@ export interface IAppContext {
   };
   resetButtonLabel: string;
   nextButtonLabel: string;
-  userName: string;
+  username: string;
   endereco: string;
   telefone: string;
   senha : string;

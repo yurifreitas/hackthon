@@ -5,7 +5,7 @@ import {IAppContext } from '../../../utilities/TranslationsProvider';
 import { readRecord, storeToLocalStorageDebounced } from '../../../utilities/localStorageService';
 import { Dispatch } from 'redux';
 
-interface IUserProfileState {
+interface IUserProfileDetailState {
   cpf: string;
   rg: string;
   telefone: string;
@@ -19,7 +19,7 @@ interface IUserProfileState {
 }
 
 export class UserProfileDetail extends React.Component<{ translations: IAppContext }> {
-  public state: IUserProfileState = {
+  public state: IUserProfileDetailState = {
     cpf: readRecord('username') || 'guest0001',
     rg: readRecord('endereco') || 'Rua das Flores, 672',
     telefone: readRecord('idade') || '18',
@@ -31,7 +31,6 @@ export class UserProfileDetail extends React.Component<{ translations: IAppConte
   };
 
   public render() {
-    const { translations } = this.props;
     console.log(this.props);
     let username;
     let endereco;
@@ -39,11 +38,11 @@ export class UserProfileDetail extends React.Component<{ translations: IAppConte
     let sexo;
     return (
       <StyledDetailedUserProfile>
-        <label htmlFor='username'>{translations.userName}</label>
+        <label htmlFor='username'>Usuário</label>
         <input type='text' name='username' value={username} onChange={this.handleUserNameChange}/>
-        <label htmlFor='endereco'>{translations.endereco}</label>
+        <label htmlFor='endereco'>Endereço</label>
         <input type='text' name='endereco' value={endereco} onChange={this.handleEnderecoChange}/>
-        <label htmlFor='idade'>{translations.idade}</label>
+        <label htmlFor='idade'>Idade</label>
         <input type='text' name='idade' value={idade} onChange={this.handleIdadeChange}/>
         <select value={sexo}>
           <option value="notSelected">Sexo</option>

@@ -27,7 +27,7 @@ export default {
     "option1": "On",
     "option2": "Off"
   },
-  "userName": "User name",
+  "username": "User name",
   "endereco": "Rua Pio 22",
   "idade" : "34",
   "telefone" : "343434343",
