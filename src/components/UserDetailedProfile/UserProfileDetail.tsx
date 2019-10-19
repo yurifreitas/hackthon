@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import StyledDetailedUserProfile from './StyledDetailedUserProfile';
-import {IAppContext } from '../../../utilities/TranslationsProvider';
-import { readRecord, storeToLocalStorageDebounced } from '../../../utilities/localStorageService';
+import {IAppContext } from '../../utilities/TranslationsProvider';
+import { readRecord, storeToLocalStorageDebounced } from '../../utilities/localStorageService';
 import { Dispatch } from 'redux';
 
 interface IUserProfileDetailState {

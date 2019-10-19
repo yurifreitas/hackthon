@@ -1,7 +1,7 @@
 import { shallow } from 'enzyme';
 import * as React from 'react';
 import { UserProfileDetail } from './UserProfileDetail';
-import translationsMock from '../../../translations/translations-mock';
+import translationsMock from '../../translations/translations-mock';
 
 jest.mock('../../utilities/localStorageService');
 
