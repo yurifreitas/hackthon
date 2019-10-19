@@ -9,6 +9,9 @@ import { withTranslations } from '../../utilities/withTranslations';
 import { IAppContext } from '../../utilities/TranslationsProvider';
 import { IMessage } from '../Message/Message';
 import { isPageActive } from '../../utilities/common';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faBars, faCog, faComment} from "@fortawesome/free-solid-svg-icons";
+import UnreadMessagesCounter from "../UnreadMessagesCounter";
 
 interface INavDispatchProps {
   connectToSockets: () => void;
