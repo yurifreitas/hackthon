@@ -21,12 +21,13 @@ class Message extends React.Component<{ message: IMessage }> {
 
     return (
       <React.Fragment>
+        <StyledMessage type={message.type}>
         <div id='nickname-container'>
           <img src={AvatarImg} className="avatarIcon" />
           {message.type === 'received' && <Nickname value={message.from}/>}
           <Timestamp value={message.time} floatToRight={message.type === 'sent'}/>
         </div>
-        <StyledMessage type={message.type}>
+
           <Linkify><Emojify>{message.content} {this.parseURLs(message.content)}</Emojify></Linkify>
         </StyledMessage>
       </React.Fragment>

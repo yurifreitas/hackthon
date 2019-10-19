@@ -19,7 +19,7 @@ const StyledChatArea = styled("section")`
   and (min-device-width: 1200px) 
   and (max-device-width: 1600px) 
   and (-webkit-min-device-pixel-ratio: 1) {
-   overflow-y: hidden;
+   //overflow-y: hidden;
 }
 
 /* ----------- Retina Screens ----------- */
@@ -28,7 +28,7 @@ const StyledChatArea = styled("section")`
   and (max-device-width: 1600px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (min-resolution: 192dpi) {
-  overflow-y: hidden;
+  //overflow-y: hidden;
 }
 `;
 
