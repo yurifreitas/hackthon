@@ -13,7 +13,7 @@ class LanguageSelector extends React.Component<{ translations: IAppContext, chan
         <label htmlFor='language'>{translations.langLabel}</label>
         <select id='language' onChange={this.handleLanguageChange} defaultValue={readRecord('lang') || 'en'}>
           <option value='en'>{translations.languageEN}</option>
-          <option value='de'>{translations.languageDE}</option>
+          <option value='pt'>{translations.languagePT}</option>
         </select>
       </StyledLanguageSelector>
     );

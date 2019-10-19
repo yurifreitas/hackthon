@@ -12,8 +12,8 @@ export default {
   "interfaceColor": "Interface Color",
   "langCode": "EN",
   "langLabel": "Language",
+  "languagePT": "Portugues",
   "languageEN": "English",
-  "languageDE": "Deutsch",
   "nav": {
     "chatTabLabel": "Chat",
     "settingsTabLabel": "Settings"

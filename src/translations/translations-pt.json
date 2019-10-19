@@ -1,0 +1,27 @@
+{
+  "clockDisplay": "Relógio hora",
+  "clockModes": {
+    "hours12": "12 Horas",
+    "hours24": "24 Horas"
+  },
+  "colors": {
+    "color1": "Light",
+    "color2": "Dark"
+  },
+  "interfaceColor": "Cores da interface",
+  "langCode": "PT",
+  "langLabel": "Language",
+  "languagePT": "Portugues",
+  "languageEN": "English",
+  "nav": {
+    "chatTabLabel": "Chat",
+    "settingsTabLabel": "Configurações"
+  },
+  "resetButtonLabel": "Resetar",
+  "ctrlEnterOptionsTitle": "Enviar mensagem ao pressionar CTRL+ENTER",
+  "ctrlEnterSendingOptions": {
+    "option1": "Ligar",
+    "option2": "Desligar"
+  },
+  "userName": "Apelido"
+}

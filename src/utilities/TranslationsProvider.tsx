@@ -1,5 +1,5 @@
 import * as React from 'react';
-import * as translationsDE from '../translations/translations-de.json';
+import * as translationsPT from '../translations/translations-pt.json';
 import * as translationsEN from '../translations/translations-en.json';
 import { readRecord } from './localStorageService';
 import { darkTheme, lightTheme, ThemeProvider } from '../theme';
@@ -18,7 +18,7 @@ export interface IAppContext {
   langCode: string;
   langLabel: string;
   languageEN: string;
-  languageDE: string;
+  languagePT: string;
   nav: {
     chatTabLabel: string,
     settingsTabLabel: string
@@ -40,7 +40,7 @@ export const AppContextConsumer = context.Consumer;
 
 export default class TranslationProvider extends React.Component {
   public state = {
-    translations: readRecord('lang') !== 'de' ? translationsEN : translationsDE,
+    translations: readRecord('lang') !== 'pt' ? translationsEN : translationsPT,
     colorTheme: readRecord('theme') !== 'dark' ? lightTheme : darkTheme
   };
 
@@ -68,7 +68,7 @@ export default class TranslationProvider extends React.Component {
 
   private changeLanguage = () => {
     this.setState({
-      translations: this.state.translations.langCode === 'DE' ? translationsEN : translationsDE
+      translations: this.state.translations.langCode === 'PT' ? translationsEN : translationsPT
     });
   }
 }
