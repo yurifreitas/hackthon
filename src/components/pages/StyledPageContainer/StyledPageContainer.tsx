@@ -14,7 +14,12 @@ const StyledPageContainer = styled("section")`
   width: 200px;
   height: 200px;
   text-indent:50px;
-}
+    }
+    
+  .avatarIcon{
+    width:50px;
+    height: 60px;
+  }
 `;
 
 

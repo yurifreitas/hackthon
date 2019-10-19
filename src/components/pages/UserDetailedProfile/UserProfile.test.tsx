@@ -1,16 +1,16 @@
 import { shallow } from 'enzyme';
 import * as React from 'react';
-import { UserProfile } from './UserProfile';
-import translationsMock from '../../translations/translations-mock';
+import { UserProfileDetail } from './UserProfileDetail';
+import translationsMock from '../../../translations/translations-mock';
 
 jest.mock('../../utilities/localStorageService');
 
 const setup = () => {
   // @ts-ignore
-  return shallow(<UserProfile translations={translationsMock} changeUsername={jest.fn()}/>)
+  return shallow(<UserProfileDetail translations={translationsMock} changeUsername={jest.fn()}/>)
 };
 
-describe('UserProfile component', () => {
+describe('UserProfileDetail component', () => {
   it('renders without crashing', () => {
     const wrapper = setup();
     expect(wrapper).not.toBe(null)

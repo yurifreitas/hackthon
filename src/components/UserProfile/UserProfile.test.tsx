@@ -10,7 +10,7 @@ const setup = () => {
   return shallow(<UserProfile translations={translationsMock} changeUsername={jest.fn()}/>)
 };
 
-describe('UserProfile component', () => {
+describe('UserProfileDetail component', () => {
   it('renders without crashing', () => {
     const wrapper = setup();
     expect(wrapper).not.toBe(null)

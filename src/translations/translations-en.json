@@ -15,7 +15,8 @@
   "languageEN": "English",
   "nav": {
     "chatTabLabel": "Chat",
-    "settingsTabLabel": "Settings"
+    "loginTabLabel": "Login",
+    "registerTabLabel": "Register"
   },
   "resetButtonLabel": "Reset",
   "nextButtonLabel": "Next",

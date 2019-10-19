@@ -85,7 +85,13 @@ export class Navigation extends React.Component<INavProps, INavState> {
         <li>
           <NavLink activeClassName='active' to='/settings'>
             <FontAwesomeIcon icon={faCog} color="white" size="lg"/>
-            <span>{appContext.nav.settingsTabLabel}</span>
+            <span>{appContext.nav.loginTabLabel}</span>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink activeClassName='active' to='/register'>
+            <FontAwesomeIcon icon={faCog} color="white" size="lg"/>
+            <span>{appContext.nav.registerTabLabel}</span>
           </NavLink>
         </li>
       </StyledNavigation>

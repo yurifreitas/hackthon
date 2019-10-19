@@ -16,7 +16,8 @@ export default {
   "languageEN": "English",
   "nav": {
     "chatTabLabel": "Chat",
-    "settingsTabLabel": "Settings"
+    "loginTabLabel": "Login",
+    "registerTabLabel": "Registro"
   },
   "resetButtonLabel": "Reset",
   "nextButtonLabel": "Next",

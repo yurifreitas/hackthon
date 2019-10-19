@@ -20,8 +20,9 @@ export interface IAppContext {
   languageEN: string;
   languagePT: string;
   nav: {
-    chatTabLabel: string,
-    settingsTabLabel: string
+    chatTabLabel: string;
+    loginTabLabel: string;
+    registerTabLabel: string;
   };
   resetButtonLabel: string;
   nextButtonLabel: string;

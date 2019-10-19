@@ -11,6 +11,7 @@ const StyledMessage = styled("div")<{ type: string }>`
   margin: ${props => props.type === 'sent' ? '4px 0' : '4px 14px'};
   display: block;
   clear: both;
+  
 `;
 
 export default StyledMessage;

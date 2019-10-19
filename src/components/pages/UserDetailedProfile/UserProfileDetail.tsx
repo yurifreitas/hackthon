@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import StyledDetailedUserProfile from './StyledDetailedUserProfile';
-import {IAppContext } from '../../utilities/TranslationsProvider';
-import { readRecord, storeToLocalStorageDebounced } from '../../utilities/localStorageService';
+import {IAppContext } from '../../../utilities/TranslationsProvider';
+import { readRecord, storeToLocalStorageDebounced } from '../../../utilities/localStorageService';
 import { Dispatch } from 'redux';
 
 interface IUserProfileState {
@@ -18,7 +18,7 @@ interface IUserProfileState {
 
 }
 
-export class UserProfile extends React.Component<{ translations: IAppContext }> {
+export class UserProfileDetail extends React.Component<{ translations: IAppContext }> {
   public state: IUserProfileState = {
     cpf: readRecord('username') || 'guest0001',
     rg: readRecord('endereco') || 'Rua das Flores, 672',
@@ -28,13 +28,11 @@ export class UserProfile extends React.Component<{ translations: IAppContext }> 
     bairro: readRecord('bairro') || 'Trindade',
     numero: readRecord('numero') || '2223',
     referencia: readRecord('referencia') || 'Em frente ao posto',
-
-
   };
 
   public render() {
     const { translations } = this.props;
-
+    console.log(this.props);
     let username;
     let endereco;
     let idade;
@@ -85,7 +83,6 @@ const mapDispatchToProps = (dispatch: Dispatch<any>) => ({
  // changeEndereco: (endereco: string) => dispatch(changeEndereco(endereco)),
  // changeIdade: (idade: string) => dispatch(changeIdade(idade))
 
-
 });
 
-export default connect(null, mapDispatchToProps)(UserProfile);
+export default connect(null, mapDispatchToProps)(UserProfileDetail);

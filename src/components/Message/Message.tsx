@@ -22,7 +22,7 @@ class Message extends React.Component<{ message: IMessage }> {
     return (
       <React.Fragment>
         <div id='nickname-container'>
-          <img src={AvatarImg} width="50" height="60" />
+          <img src={AvatarImg} className="avatarIcon" />
           {message.type === 'received' && <Nickname value={message.from}/>}
           <Timestamp value={message.time} floatToRight={message.type === 'sent'}/>
         </div>
