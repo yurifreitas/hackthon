@@ -6,6 +6,7 @@ import Timestamp from '../Timestamp';
 import MicrolinkCard from '@microlink/react';
 import Linkify from 'linkifyjs/react';
 import * as getUrls from 'get-urls';
+import AvatarImg from '../../utilities/avatar.png'
 
 export interface IMessage {
   from: string;
@@ -21,6 +22,7 @@ class Message extends React.Component<{ message: IMessage }> {
     return (
       <React.Fragment>
         <div id='nickname-container'>
+          <img src={AvatarImg} width="50" height="60" />
           {message.type === 'received' && <Nickname value={message.from}/>}
           <Timestamp value={message.time} floatToRight={message.type === 'sent'}/>
         </div>
