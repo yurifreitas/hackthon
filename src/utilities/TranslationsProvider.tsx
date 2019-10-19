@@ -27,6 +27,8 @@ export interface IAppContext {
   nextButtonLabel: string;
   userName: string;
   endereco: string;
+  telefone: string;
+  senha : string;
   idade: string;
   ctrlEnterOptionsTitle: string;
   ctrlEnterSendingOptions: {

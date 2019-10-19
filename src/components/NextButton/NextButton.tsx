@@ -8,7 +8,11 @@ class NextButton extends React.Component<{ translations: IAppContext }> {
   public render() {
     return (
       <StyledNextButton>
-        <Link to="/chat">Forgot password?</Link>
+        <Link to="/chat">
+          <button type="button">
+            Entrar
+          </button>
+        </Link>
       </StyledNextButton>
     );
   }

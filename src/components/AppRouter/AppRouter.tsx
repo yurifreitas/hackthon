@@ -15,8 +15,6 @@ export const AppRouter: React.FunctionComponent = () => {
         <BlockedNavigation />
           <Route exact={true} path='/' component={SettingsPage} />
           <Route path='/chat' component={ChatPage} />
-          <Route path='/cadastro' component={ChatPage} />
-
           <Route path='/settings' component={SettingsPage} />
       </React.Fragment>
     </HashRouter>

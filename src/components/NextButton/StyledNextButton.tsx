@@ -6,12 +6,14 @@ const StyledNextButton = styled("div")`
   bottom: 14px;
   
   button {
-    width: 100%;
+    border-radius:10px;
+    marginTop: 20
+    width: 40%;
     line-height: 28px;
     font-size: 1.1em;
     padding: 7px;
-    color: ${(props) => props.theme.primaryLightColor};
-    background-color: ${(props) => props.theme.secondaryDarkColor};
+    color: ${(props) => props.theme.secondaryDarkColor};
+    background-color: ${(props) => props.theme.secondaryLightColor};
   }
 `;
 

@@ -28,5 +28,8 @@ export default {
   },
   "userName": "User name",
   "endereco": "Rua Pio 22",
-  "idade" : "34"
+  "idade" : "34",
+  "telefone" : "343434343",
+  "senha" : "dhsauihdusai"
+
 };

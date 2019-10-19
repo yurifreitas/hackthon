@@ -1,14 +1,12 @@
 import styled from '../../theme';
 
-const StyledUserProfile = styled("div")`
+const StyledDetailedUserProfile = styled("div")`
  padding: 14px;
  text-align: left;
  
  label {
   font-size: 1.2em;
  }
- 
-
  select{
    color: ${props => props.theme.primaryDarkColor};
   width: 100%;
@@ -27,8 +25,7 @@ const StyledUserProfile = styled("div")`
   font-size: 1.1em;
   box-sizing: border-box;
   padding: 7px;
-  border-radius:10px;
  }
 `;
 
-export default StyledUserProfile;
+export default StyledDetailedUserProfile;

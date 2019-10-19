@@ -27,10 +27,10 @@ export const darkTheme = {
 
 export const lightTheme = {
   primaryLightColor: '#e9e9eb',
-  secondaryLightColor: '#ed7a7a',
-  primaryDarkColor: '#da0000',
-  secondaryDarkColor: '#7b0000',
-  messageBackgroundColor: '#3b1111',
+  secondaryLightColor: '#ff020b',
+  primaryDarkColor: '#ff020b',
+  secondaryDarkColor: '#ffffff',
+  messageBackgroundColor: '#000000',
 };
 
 export default styled;

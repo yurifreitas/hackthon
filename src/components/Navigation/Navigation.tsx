@@ -3,11 +3,9 @@ import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import { connectSocket } from '../../store/socket/actions';
 import StyledNavigation from './StyledNavigation';
-import { faCog, faComment } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { NavLink } from 'react-router-dom';
 import { withTranslations } from '../../utilities/withTranslations';
-import UnreadMessagesCounter from '../UnreadMessagesCounter/UnreadMessageCounter';
+// import UnreadMessagesCounter from '../UnreadMessagesCounter/UnreadMessageCounter';
 import { IAppContext } from '../../utilities/TranslationsProvider';
 import { IMessage } from '../Message/Message';
 import { isPageActive } from '../../utilities/common';
@@ -60,24 +58,11 @@ export class Navigation extends React.Component<INavProps, INavState> {
 
   public render() {
     const { appContext } = this.props;
-    const { shouldBlink, unreadMessages } = this.state;
-
     return appContext && (
       <StyledNavigation>
         <li>
-          <NavLink exact={true} activeClassName='active'
-                   className={shouldBlink ? 'blinking' : 'no-blinking'}
-                   onClick={this.clearNotifications}
-                   to='/chat'>
-            <FontAwesomeIcon icon={faComment} color="white" size="lg"/>
-            <UnreadMessagesCounter count={unreadMessages}/>
-            <span>{appContext.nav.chatTabLabel}</span>
-          </NavLink>
-        </li>
-        <li>
           <NavLink activeClassName='active' to='/settings'>
-            <FontAwesomeIcon icon={faCog} color="white" size="lg"/>
-            <span>{appContext.nav.settingsTabLabel}</span>
+            <span>Samu Acessível</span>
           </NavLink>
         </li>
       </StyledNavigation>
@@ -90,11 +75,11 @@ export class Navigation extends React.Component<INavProps, INavState> {
     });
   };
 
-  private stopBlinking = (): void => {
-    this.setState({
-      shouldBlink: false
-    });
-  };
+  // private stopBlinking = (): void => {
+  //   this.setState({
+  //     shouldBlink: false
+  //   });
+  // };
 
   private updateUnreadMessagesCount = () => {
     this.setState({
@@ -102,10 +87,10 @@ export class Navigation extends React.Component<INavProps, INavState> {
     });
   };
 
-  private clearNotifications = () => {
-    this.setState({ unreadMessages: 0, receivedUnreadMessages: [] });
-    this.stopBlinking();
-  };
+  // private clearNotifications = () => {
+  //   this.setState({ unreadMessages: 0, receivedUnreadMessages: [] });
+  //   this.stopBlinking();
+  // };
 }
 
 const mapStateToProps = (state: any) => ({

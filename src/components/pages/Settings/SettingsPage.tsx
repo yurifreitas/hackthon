@@ -1,6 +1,5 @@
 import * as React from 'react';
 // import ClockModeSelector from '../../ClockModeSelector';
-import LanguageSelector from '../../LanguageSelector';
 // import ThemeSelector from '../../ThemeSelector';
 // import SendingOptions from '../../SendingOptions';
 import UserProfile from '../../UserProfile';
@@ -8,11 +7,12 @@ import StyledPageContainer from '../StyledPageContainer';
 import { withTranslations } from '../../../utilities/withTranslations';
 import { IAppContext } from '../../../utilities/TranslationsProvider';
 import NextButton from "../../NextButton";
+import logo from "../../../utilities/samu_logo.png";
 
 const SettingsPage = ({ appContext, changeLanguage, changeTheme }:
                         { appContext: IAppContext, changeLanguage: () => void, changeTheme: () => void }) => (
   <StyledPageContainer>
-      <LanguageSelector translations={appContext} changeLanguage={changeLanguage}/>
+      <img src={logo}/>
       <UserProfile translations={appContext}/>
       <NextButton translations={appContext}/>
   </StyledPageContainer>

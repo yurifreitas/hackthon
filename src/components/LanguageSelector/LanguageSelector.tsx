@@ -11,7 +11,7 @@ class LanguageSelector extends React.Component<{ translations: IAppContext, chan
     return (
       <StyledLanguageSelector>
         <label htmlFor='language'>{translations.langLabel}</label>
-        <select id='language' onChange={this.handleLanguageChange} defaultValue={readRecord('lang') || 'en'}>
+        <select id='language' onChange={this.handleLanguageChange} defaultValue={readRecord('lang') || 'pt'}>
           <option value='en'>{translations.languageEN}</option>
           <option value='pt'>{translations.languagePT}</option>
         </select>

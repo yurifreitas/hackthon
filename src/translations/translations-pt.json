@@ -25,5 +25,7 @@
     "option1": "Ligar",
     "option2": "Desligar"
   },
-  "userName": "Apelido"
+  "userName": "Apelido",
+  "telefone": "Telefone:",
+  "senha": "Senha:"
 }
