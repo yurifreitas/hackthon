@@ -16,4 +16,5 @@ else
 fi
 export FLASK_APP=server
 export FLASK_DEBUG=true
-flask run
+cd server
+python server.py

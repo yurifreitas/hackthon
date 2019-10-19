@@ -4,7 +4,7 @@ from flask_cors import CORS
 
 app = Flask(__name__, static_folder='../../client/build/static')
 app.config['SECRET_KEY'] = 'development key'
-socket = SocketIO(app)
+socket = SocketIO(app, cors_allowed_origins="*")
 CORS(app)
 
 
@@ -46,3 +46,6 @@ def on_join(data):
 def on_chat_sent(data):
     room = data['room']
     emit('message_sent', data, room=room)
+
+if __name__ == '__main__':
+    Flask.run(app,host="0.0.0.0",debug=True)
