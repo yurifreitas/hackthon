@@ -3,7 +3,7 @@ import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import { connectSocket } from '../../store/socket/actions';
 import StyledNavigation from './StyledNavigation';
-import { faCog, faComment } from '@fortawesome/free-solid-svg-icons';
+import { faCog, faComment, faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { NavLink } from 'react-router-dom';
 import { withTranslations } from '../../utilities/withTranslations';
@@ -65,6 +65,13 @@ export class Navigation extends React.Component<INavProps, INavState> {
     return appContext && (
       <StyledNavigation>
         <li>
+          <NavLink exact={true}
+                   className={shouldBlink ? 'blinking' : 'no-blinking'}
+                   to='#'>
+            <FontAwesomeIcon icon={faBars} color="white" size="lg"/>
+          </NavLink>
+        </li>
+        <li>
           <NavLink exact={true} activeClassName='active'
                    className={shouldBlink ? 'blinking' : 'no-blinking'}
                    onClick={this.clearNotifications}
@@ -81,6 +88,7 @@ export class Navigation extends React.Component<INavProps, INavState> {
           </NavLink>
         </li>
       </StyledNavigation>
+
     );
   }
 
@@ -106,6 +114,7 @@ export class Navigation extends React.Component<INavProps, INavState> {
     this.setState({ unreadMessages: 0, receivedUnreadMessages: [] });
     this.stopBlinking();
   };
+
 }
 
 const mapStateToProps = (state: any) => ({
