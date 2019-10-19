@@ -7,7 +7,6 @@ const StyledChatArea = styled("section")`
   position: absolute;
   width: 100%;
   height: calc( 100vh - 125px);
-  overflow-y: scroll;
   left: 0;
   
   #nickname-container {
