@@ -27,7 +27,7 @@ const StyledNavigation = styled("ul")`
       }
       
       &.active {
-        background-color: ${props => props.theme.secondaryDarkColor};
+        background-color: #530000;
         border-bottom: 3px solid #ccc;
       }
       
