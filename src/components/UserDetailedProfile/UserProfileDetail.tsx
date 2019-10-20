@@ -4,6 +4,7 @@ import StyledDetailedUserProfile from './StyledDetailedUserProfile';
 import {IAppContext } from '../../utilities/TranslationsProvider';
 import { readRecord, storeToLocalStorageDebounced } from '../../utilities/localStorageService';
 import { Dispatch } from 'redux';
+import { MDBInput } from "mdbreact";
 
 interface IUserProfileDetailState {
   cpf: string;
@@ -38,6 +39,7 @@ export class UserProfileDetail extends React.Component<{ translations: IAppConte
     let sexo;
     return (
       <StyledDetailedUserProfile>
+          <MDBInput label="Material input" />
         <label htmlFor='username'>Usuário</label>
         <input type='text' name='username' value={username} onChange={this.handleUserNameChange}/>
         <label htmlFor='endereco'>Endereço</label>

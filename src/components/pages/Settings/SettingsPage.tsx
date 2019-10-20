@@ -9,6 +9,7 @@ import { IAppContext } from '../../../utilities/TranslationsProvider';
 import NextButton from "../../NextButton";
 import logo from "../../../utilities/samu_logo.png";
 
+
 const SettingsPage = ({ appContext, changeLanguage, changeTheme }:
                         { appContext: IAppContext, changeLanguage: () => void, changeTheme: () => void }) => (
   <StyledPageContainer>
