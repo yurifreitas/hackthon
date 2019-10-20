@@ -2,7 +2,7 @@ import styled from '../../theme';
 
 const StyledUserProfile = styled("div")`
  padding: 14px;
- text-align: left;
+ text-align: center;
  
  label {
   font-size: 1.2em;
@@ -29,6 +29,7 @@ const StyledUserProfile = styled("div")`
   padding: 7px;
   border-radius:10px;
  }
+ 
 `;
 
 export default StyledUserProfile;

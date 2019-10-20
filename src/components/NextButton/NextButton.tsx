@@ -4,12 +4,16 @@ import {IAppContext } from '../../utilities/TranslationsProvider';
 import {Link} from "react-router-dom";
 
 
+function activateLasers() {
+
+}
+
 class NextButton extends React.Component<{ translations: IAppContext }> {
   public render() {
     return (
       <StyledNextButton>
         <Link to="/chat">
-          <button type="button">
+          <button onClick={activateLasers} type="button">
             Entrar
           </button>
         </Link>

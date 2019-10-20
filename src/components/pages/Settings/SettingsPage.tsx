@@ -6,7 +6,6 @@ import UserProfile from '../../UserProfile';
 import StyledPageContainer from '../StyledPageContainer';
 import { withTranslations } from '../../../utilities/withTranslations';
 import { IAppContext } from '../../../utilities/TranslationsProvider';
-import NextButton from "../../NextButton";
 import logo from "../../../utilities/samu_logo.png";
 
 const SettingsPage = ({ appContext, changeLanguage, changeTheme }:
@@ -14,7 +13,6 @@ const SettingsPage = ({ appContext, changeLanguage, changeTheme }:
   <StyledPageContainer>
       <img src={logo}/>
       <UserProfile translations={appContext}/>
-      <NextButton translations={appContext}/>
   </StyledPageContainer>
 );
 
